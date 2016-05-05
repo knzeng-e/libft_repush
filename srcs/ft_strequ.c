@@ -6,7 +6,7 @@
 /*   By: knzeng-e <knzeng-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/21 18:51:59 by knzeng-e          #+#    #+#             */
-/*   Updated: 2016/03/21 18:55:17 by knzeng-e         ###   ########.fr       */
+/*   Updated: 2016/05/05 12:48:39 by knzeng-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 int	ft_strequ(const char *s1, const char *s2)
 {
-	return (ft_strcmp(s1, s2) == 0);
+	if (s1 && s2)
+		return (ft_strcmp(s1, s2) == 0);
+	return ((s1 != NULL) - (s2 != NULL));
 }
