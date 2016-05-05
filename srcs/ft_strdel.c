@@ -6,7 +6,7 @@
 /*   By: knzeng-e <knzeng-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/21 05:51:27 by knzeng-e          #+#    #+#             */
-/*   Updated: 2016/03/21 05:55:26 by knzeng-e         ###   ########.fr       */
+/*   Updated: 2016/04/28 17:29:18 by knzeng-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_strdel(char **as)
 {
-	ft_memdel((void **)as);
+	if (as)
+		ft_memdel((void **)as);
 }

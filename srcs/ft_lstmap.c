@@ -6,7 +6,7 @@
 /*   By: knzeng-e <knzeng-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/01 01:27:06 by knzeng-e          #+#    #+#             */
-/*   Updated: 2016/04/01 01:27:33 by knzeng-e         ###   ########.fr       */
+/*   Updated: 2016/04/28 20:33:04 by knzeng-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 	t_list	*tmp;
 
 	new = NULL;
-	while (lst)
+	rend = NULL;
+	while (f && lst)
 	{
 		tmp = (*f)(lst);
 		if (!(new))
