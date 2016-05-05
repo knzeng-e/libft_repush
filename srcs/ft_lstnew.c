@@ -6,7 +6,7 @@
 /*   By: knzeng-e <knzeng-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/01 01:23:19 by knzeng-e          #+#    #+#             */
-/*   Updated: 2016/04/28 19:17:27 by knzeng-e         ###   ########.fr       */
+/*   Updated: 2016/05/05 12:11:03 by knzeng-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ t_list	*ft_lstnew(const void *content, size_t content_size)
 	}
 	else
 	{
-		new->content = (void *)content;
+		new->content = (void *)malloc(sizeof(char) * content_size);
+		new->content = ft_memcpy(new->content, content, content_size);
 		new->content_size = content_size;
 	}
 	new->next = NULL;
